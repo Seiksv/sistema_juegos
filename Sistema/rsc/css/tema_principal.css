@@ -139,6 +139,10 @@ body {
 
     }
 
+    .link_header{
+        color: #fff!important;
+        background-color: #00bbbb;
+    }
     .main-menu li>a {
         position: relative;
         width: 255px;
@@ -236,9 +240,6 @@ body {
     a:focus {
         text-decoration: none;
         border-left: 0px solid #F7F7F7;
-
-
-
     }
 
     nav {
