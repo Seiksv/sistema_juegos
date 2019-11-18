@@ -7,9 +7,8 @@ class User extends DB{
 
 
     public function userExists($user, $pass){
-        $md5pass = md5($pass);
-        $query = $this->connect()->prepare('SELECT * FROM usuario WHERE nombre = :user AND contra = :pass');
-        $query->execute(['user' => $user, 'pass' => $md5pass]);
+        $query = $this->connect()->prepare('SELECT * FROM usuario WHERE usuario = :user AND contra = :pass');
+        $query->execute(['user' => $user, 'pass' => $pass]);
 
         if($query->rowCount()){
             return true;
@@ -19,12 +18,12 @@ class User extends DB{
     }
 
     public function setUser($user){
-        $query = $this->connect()->prepare('SELECT * FROM usuario WHERE nombre = :user');
+        $query = $this->connect()->prepare('SELECT * FROM usuario WHERE usuario = :user');
         $query->execute(['user' => $user]);
         
         foreach ($query as $currentUser) {
             $this->nombre = $currentUser['nombre'];
-            $this->usename = $currentUser['username'];
+            $this->usename = $currentUser['usuario'];
         }
     }
 
