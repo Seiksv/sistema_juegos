@@ -31,11 +31,6 @@ body {
 
     }
 
-
-
-
-
-
     /* ScrolBar  */
     .scrollbar {
 
@@ -44,7 +39,6 @@ body {
         overflow-y: hidden;
         overflow-x: hidden;
     }
-
     .scrollbar:hover {
 
         height: 90%;

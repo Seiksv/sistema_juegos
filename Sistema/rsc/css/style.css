@@ -24,6 +24,9 @@
 .section--green {
   background-color: #03cea4;
 }
+.section--blue {
+  background-color: #432bca;
+}
 .section:hover, .section:active, .section:focus {
   flex: 3;
 }
