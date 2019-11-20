@@ -169,33 +169,39 @@ $niveles_usuario = $niveles->getNivelesUser($userSession->getCurrentUser());
   
     <div class="container">
         <?php 
-      
         //Inicializo $html 
             $html="";
             $i=0;
             //Recorro el arrego de niveles
             foreach ($niveles_juego as $nivel) {
              
+              //Si el iterador es menor que la cantidad de niveles se ejecuta :v
               if ($i<count($niveles_usuario)) {
+
+                //Saco el porcentaje para obtener los pixeles que tiene la barra indicadora de cada ejercicio
                 $barra_porcentaje = (((($niveles_usuario[$i][6])*100)/10) * 250)/100;
-                if($barra_porcentaje == 250)
+
+                //Si el porcentaje es igual que el ancho total de la card o si el estado del juego es finalizado entonces se ejecuta
+                if($barra_porcentaje == 250 or $niveles_usuario[$i][9] == "si")
                 {
                   $felicitaciones = "Nivel Completo :D";
-                  $boton_jugar ="";
+                  $boton_jugar ="<a href='#popup-article' class='rainbow-button' alt='Volver a jugar' style='font-size:1.2vw'></a>";
                 }
+                //Sino se muestran mensajes para que lo intentes :D
                 else{
                   $felicitaciones = "";
-                  $boton_jugar = "<a href='#' class='rainbow-button' alt='Intentar'></a>";
+                  $boton_jugar = "<a href='#popup-article' class='rainbow-button' alt='Intentar'></a>
+                 
+                  ";
                 }
-                  
-
+      
                 $i++;
               }
               else
               {
                 $barra_porcentaje=0;
                 $felicitaciones = "";
-                $boton_jugar = "<a href='#' class='rainbow-button' alt='Intentar'></a>";
+                $boton_jugar = "<a href='#popup-article' class='rainbow-button' alt='Intentar'></a>";
               }
             
               //Los almaceno en $html
@@ -223,6 +229,236 @@ $niveles_usuario = $niveles->getNivelesUser($userSession->getCurrentUser());
             echo $html;
           ?>
     </div>
+
+
+    <style>
+    
+/* popup */
+
+.popup{
+  width: 100%;
+  height: 100vh;
+  display: none;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#popup-article:target{
+  display: flex;
+}
+
+.popup:before{
+  content: "";
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+
+  position: fixed;
+  left: 0;
+  top: 50%;
+  will-change: height, top;
+  animation: open-animation .6s cubic-bezier(0.83, 0.04, 0, 1.16) .65s both;
+}
+
+.popup:after{
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #f0f0f0;
+
+  will-change: width, opacity;
+  animation: line-animation .6s cubic-bezier(0.83, 0.04, 0, 1.16) both;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+}
+
+@keyframes line-animation{
+
+  0%{
+    width: 0;
+    opacity: 1;
+  }
+
+  99%{
+    width: 100%;
+    opacity: 1;
+  }
+
+  100%{
+    width: 100%;
+    opacity: 0;
+  }  
+}
+
+@keyframes open-animation{
+
+  0%{
+    height: 0;
+    top: 50%;
+  }
+
+  100%{
+    height: 100vh;
+    top: 0;
+  }
+}
+
+.popup__block{
+  height: calc(100vh - 40px);
+  padding: 5% 15%;
+  box-sizing: border-box;
+  position: relative;
+  
+  margin: auto;
+  overflow: auto;
+  animation: fade .5s ease-out 1.3s both;
+}
+
+@keyframes fade{
+
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+.popup__title{
+  font-size: 2.5rem;
+  margin: 0 0 1em;
+}
+
+.popup__close{
+  width: 3.2rem;
+  height: 3.2rem;
+  text-indent: -9999px;
+  
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gICAgPHBhdGggZD0iTTE5IDYuNDFMMTcuNTkgNSAxMiAxMC41OSA2LjQxIDUgNSA2LjQxIDEwLjU5IDEyIDUgMTcuNTkgNi40MSAxOSAxMiAxMy40MSAxNy41OSAxOSAxOSAxNy41OSAxMy40MSAxMnoiLz4gICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg==);
+}
+
+
+/*
+* demo page
+*/
+
+@media screen and (min-width: 768px){
+
+  html{
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (max-width: 767px){
+
+  html{
+    font-size: 50%;
+  }
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  font-size: 1.6rem;
+  color: #222;
+  background-color: #512da8;
+
+  margin: 0;
+  -webkit-overflow-scrolling: touch;   
+  overflow-y: scroll;
+}
+
+p{
+  margin: 0;
+  line-height: 1.5;
+}
+
+p:not(:last-child){
+  margin-bottom: 1.5rem;
+}
+
+img{
+  display :block;
+  max-width: 100%;
+}
+
+a{
+  text-decoration: none;
+}
+
+.open-popup{
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border: 1px solid;
+}
+
+.page{
+  min-height: 100vh;
+  display: flex;
+}
+
+.page__container{
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;  
+  margin: auto;
+}
+
+/*
+=====
+LinkedIn
+=====
+*/
+
+.linkedin{
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.linkedin__text{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 3.5rem;
+}
+
+.linkedin__link{
+  color: #ff5c5c;
+}
+    </style>
+
+
+
+<div id="popup-article" class="popup">
+  <div class="popup__block">
+    <div class="linkedin">
+      <div class="linkedin__container">
+        <p class="linkedin__text">Nivel 1</p>
+      </div>
+    </div>
+    <p><h1 class="popup__title">Indicaciones</h1> Cuenta cuantos vegetales hay en cada recuadro y selecciona con ayuda del mouse el numero que indica la respuesta correcta.</p>
+        <a href="#" class="popup__close">close</a>
+  </div>
+</div>
+
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../rsc/js/jquery-3.4.1.js"></script>
@@ -230,8 +466,10 @@ $niveles_usuario = $niveles->getNivelesUser($userSession->getCurrentUser());
     <script src="../rsc/js/bootstrap.min.js"></script>
 
     <script>
+      //Funcion que controla el evento para pasar encima el mouse sobre el componente
       function hover_card(porciento){
         $(".card").hover(function(){
+          //Aca pongo el porcentaje calculado para obtener la distancia de la barra
           $('.filledbar', this).css({
             "width": porciento+"px"
           });
