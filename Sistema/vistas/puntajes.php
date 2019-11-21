@@ -209,6 +209,7 @@ $niveles_usuario = $niveles->getNivelesUser($userSession->getCurrentUser());
 
     <script>
       function identificador_nivel(id){
+        alert(id);
         $("#identificador").val(id);
       }
     function calificarniv2(nivel, val1,val2,val3){
@@ -225,7 +226,7 @@ $niveles_usuario = $niveles->getNivelesUser($userSession->getCurrentUser());
         }
 
         
-        var jqxhr = $.post( "assets/ejercicios_ajax.php",{accion:"insertar",puntaje:puntaje,nivel:nivel, }, function() {
+        var jqxhr = $.post( "assets/ejercicios_ajax.php",{accion:"insertar",puntaje:puntaje,nivel:nivel,usuario:'<?= $userSession->getCurrentUser(); ?>'}, function() {
               }).done(function(data ) {
                 alert(data); 
                 })
