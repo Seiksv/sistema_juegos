@@ -23,6 +23,8 @@
   
   include_once("../rutas.php"); 
   include_once(USER_SESSION);
+  include_once(BASE_DATOS);
+
   $userSession = new UserSession();   
   include("assets/menu_lateral.php");
   ?>

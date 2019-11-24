@@ -9,7 +9,9 @@ define('INICIO', ROOT_PATH.'vistas/home.php');
 define('MODELOS', ROOT_PATH.'modelos/');
 define('VISTAS', ROOT_PATH.'vistas/');
 define('CONTROLADORES', ROOT_PATH.'controlador/');
+define('BASE_DATOS',ROOT_PATH.'includes/db.php');
 
+define('EJERCICIOSJS',ROOT_PATH.'rsc/js/ejercicios.php');
 
 
 ?>

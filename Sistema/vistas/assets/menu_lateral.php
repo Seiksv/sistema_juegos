@@ -19,23 +19,24 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="perfil.php">
                     <i class="fa fa-user fa-lg"></i>
                     <span class="nav-text">Mi Perfil</span>
                 </a>
             </li>
             <li>
                 <a href="puntajes.php">
-                    <i class="fa fa-envelope-o fa-lg"></i>
+                <i class="fa fa-gamepad fa-lg"></i>
                     <span class="nav-text">Mis Puntajes</span>
                 </a>
             </li>
+            <!--
             <li class="">
                 <a href="ejercicios.php">
                     <i class="fa fa-gamepad fa-lg"></i>
                     <span class="nav-text">Ejercicios</span>
                 </a>
-            </li>
+            </li>!-->
           
         </ul>
         <li>
@@ -54,9 +55,5 @@
                 </a>
             </li>
         </ul>
-        <ul class="logout">
-            <li>
-                <i class="fa fa-lightbulb-o fa-lg"></i>
-            </li>
-        </ul>
+        
 </nav>
