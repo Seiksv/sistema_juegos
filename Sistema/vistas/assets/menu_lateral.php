@@ -27,7 +27,7 @@
             <li>
                 <a href="puntajes.php">
                 <i class="fa fa-gamepad fa-lg"></i>
-                    <span class="nav-text">Mis Puntajes</span>
+                    <span class="nav-text">Mis Juegos</span>
                 </a>
             </li>
             <!--
