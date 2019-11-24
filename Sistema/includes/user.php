@@ -20,13 +20,18 @@ class User extends DB{
     public function createUser($user, $pass, $nombre){
         $query = $this->connect()->prepare("INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `contra`, `TpoUsuario_id_tpo_usuario`, `Curso_idCurso`, `usuario`) VALUES (NULL, '$nombre', null, '$pass', 1, 1, '$user');
         ");
-        $query->execute();
+        try {
+            $query->execute();
 
-        if($query->rowCount()){
-            return true;
-        }else{
+            if($query->rowCount()){
+                return true;
+            }else{
+                return false;
+            }
+        } catch (\Throwable $th) {
             return false;
         }
+       
     }
     public function createLevels($user,$nivel,$permiso){
         $query = $this->connect()->prepare("INSERT INTO `juego_x_usuario` (`id`, `id_usuario`, `id_juego`, `intentos`, `fallos`, `aciertos`, `finalizado`, `acceso`) VALUES (NULL, (SELECT id_usuario FROM usuario WHERE usuario = '$user'), '$nivel', 0, 0, 0, 'no', '$permiso')");

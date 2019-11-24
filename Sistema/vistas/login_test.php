@@ -21,8 +21,8 @@
 				<a href="#" class="social"><i class="fas fa-calculator"></i></a>
 				
 			</div>
-			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" name="username"/>
+			<span>Ingresa tus credenciales <br>(El usuario tiene que ser único)</span>
+			<input type="text" placeholder="Usuario" name="username"/>
 			<input type="text" placeholder="Nombre" name="nombre"/>
 			<input type="password" placeholder="Contraseña" name="password" />
 			<input type="hidden" name="accion" value="registrar">
@@ -70,11 +70,13 @@
 <footer>
 	<p>
 		Created with <i class="fa fa-heart"></i> by
-		<a target="_blank" href="https://github.com/Seiksv">Seiks</a>
+		<a target="_blank" href="https://github.com/Seiksv">Seiksv</a>
 		- Read how I created this and how much time this took me.
 		<a target="_blank" href="https://github.com/Seiksv/sistema_juegos.git">here</a>.
 	</p>
 </footer>
+<script src="rsc/js/sweetalert2.js"></script>
+<div id="html_out"><?=$error_registro?></div>
 <style>
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
@@ -342,5 +344,7 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
   </script>
+    
+
 </body>
 </html>

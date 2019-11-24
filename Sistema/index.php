@@ -48,7 +48,14 @@ else if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['
         include_once 'vistas/login_test.php';
     }
     else{
-        $errorLogin="Usuario ya existe";
+        $error_registro = "<script>Swal.fire({
+            icon: 'error',
+            title: 'Algo anda mal...',
+            text: 'Creo que el usuario ya esta tomado, utiliza otro!',
+            footer: '<a href>¿Más información? Preguntale a tu profe!</a>'
+          })</script>";
+        include_once 'vistas/login_test.php';
+        
     }
 }else{
     //echo "Algo va mal";
