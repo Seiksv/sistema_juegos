@@ -3,8 +3,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="../rsc/css/tema_principal.css">
     <link rel="stylesheet" type="text/css" href="../rsc/css/style.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../rsc/fontawesome/css/all.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <?php
   //Incluyo los archivos que necesitare
@@ -22,7 +22,7 @@
   $ejercicio = new ejercicios;
   //Obtengo los niveles
 
-  $niveles_juego = $niveles->getNiveles();
+  $niveles_juego = $niveles->getNiveles($userSession->getCurrentUser());
   $niveles_usuario = $niveles->getNivelesUser($userSession->getCurrentUser());
 
 
@@ -60,9 +60,14 @@
         $boton_jugar = "<a href='#ejercicio" . ($i + 1) . "' class='rainbow-button' alt='Volver a jugar' style='font-size:1.2vw' onclick='identificador_nivel(" . $nivel['idJuego'] . ")'></a>";
       }
       //Sino se muestran mensajes para que lo intentes :D
-      else {
+      else if($nivel['acceso']=='si'){
         $felicitaciones = "";
         $boton_jugar = "<a href='#ejercicio" . ($i + 1) . "' class='rainbow-button' alt='Intentar' onclick='identificador_nivel(" . $nivel['idJuego'] . ")'></a>   
+                  ";
+      }
+      else if($nivel['acceso']=='no'){
+        $felicitaciones = "";
+        $boton_jugar = "<button class='rainbow-button' alt='No tienes acceso' onclick='no_permiso()'></button>   
                   ";
       }
 
@@ -74,7 +79,6 @@
                 <div class="emptybar"></div>
                 <div class="filledbar"></div>
               </div>
-              
               <div class="circle">
               ' . $felicitaciones . '
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -870,7 +874,7 @@
                     <p class="linkedin__text">Nivel 10</p>
                 </div>
             </div>
-<div class="text-center">
+        <div class="text-center">
             <p >
                 <h1 class="popup__title">Indicaciones</h1>Lorena, Antonio, Santiago y Cecilia desean comprar algunas cosas en la tienda de regalos.
                 <img src='../rsc/img/nivel10/indicaciones.jpg' alt=''

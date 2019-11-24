@@ -5,19 +5,18 @@ class Niveles extends DB{
     private $nombre;
     private $username;
 
-    public function getNiveles(){
+    public function getNiveles($usuario){
 
      if ($this->connect()) 
  {
 
-      $sql = "SELECT juego_x_usuario.*, juego.* FROM juego_x_usuario INNER JOIN juego on juego_x_usuario.id_juego = juego.idJuego";
+      $sql = "SELECT juego_x_usuario.*, juego.* FROM juego_x_usuario INNER JOIN juego on juego_x_usuario.id_juego = juego.idJuego where id_usuario = (Select id_usuario from usuario where usuario = '$usuario')";
       $stmt = $this->connect()->prepare($sql);
       $stmt->execute(); 
      return $res = $stmt->fetchAll();
-  } else {
-      echo "Hubo un problema con la conexión";
-  }
-       
+        } else {
+            echo "Hubo un problema con la conexión";
+        }
     }
 
     public function getNivelesUser($user){
@@ -48,7 +47,11 @@ class Niveles extends DB{
         $res = $query->execute();
         return $res;
     }
-    
+    public function activar_nivel($juego,$usuario){
+        $query = $this->connect()->prepare(" UPDATE `juego_x_usuario` SET `acceso` = 'si' where id_usuario = (Select id_usuario from usuario where usuario = '$usuario') and id_juego= $juego");
+        $res = $query->execute();
+        return $res;
+    }
 }
 
 ?>

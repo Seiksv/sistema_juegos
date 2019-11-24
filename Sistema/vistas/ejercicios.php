@@ -20,7 +20,7 @@
     <link href="../rsc/css/all.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../rsc/css/tema_principal.css">
     <link rel="stylesheet" type="text/css" href="../rsc/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../rsc/fontawesome/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
 
 </head>

@@ -408,4 +408,12 @@ var jqxhr = $.post("assets/ejercicios_ajax.php", {
 
     }
   }
+  function no_permiso(){
+    Swal.fire({
+                     icon: 'error',
+                     title: 'No tienes acceso a este juego :C',
+                     html: '<p style=`text-size:20px`>Avanza hasta completar al 100% el nivel anterior para desbloquear este!</p>',
+                     footer: '<a href>¿Más información? Preguntale a tu profe!</a>'
+                   })
+  }
   </script>

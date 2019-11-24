@@ -42,7 +42,11 @@
                     $insercion = $niveles->actua_nivel($resultado[0][0],$intentos,$fallos,$puntaje,$terminado);
                    // print_r("Actualizado");
                    // print_r($insercion);
-                 
+                  
+                 if ($fallos==0 and $nivel<=9) {
+                    $nivel = $nivel+1;
+                    $activar_nivel = $niveles->activar_nivel($nivel,$usuario);
+                 }
                    if($fallos==0 and $nivel ==3){
                        echo "<script>
                        Swal.fire({

@@ -47,8 +47,8 @@
         </li>
         <ul class="logout">
             <li>
-                <a href="includes/logout.php">
-                    <i class="fa fa-lightbulb-o fa-lg"></i>
+                <a href="assets/logout.php">
+                <i class="fa fa-sign-out-alt fa-lg"></i>
                     <span class="nav-text">
                         Cerrar sesión
                     </span>
