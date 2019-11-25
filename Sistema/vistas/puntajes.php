@@ -141,7 +141,7 @@
             <hr>
             <div class="text-center ">
                 <img src='../rsc/img/nivel1/ej2/1.png' alt=''
-                    style=' margin-left: auto;margin-right: auto;display:inline-block;width:40%;'>
+                    style=' margin-left: auto;margin-right: auto;display:inline-block;width:20%;'>
             </div>
             <div class="text-center">
                 <input type='radio' name='niv1_ej2' value='1' class='option-input radio'>1
@@ -150,7 +150,7 @@
                 <input type='radio' name='niv1_ej2' value='6' class='option-input radio'>6
                 <div class="text-center" style="margin-top:25px;">
                     <button id="boton_nivel1"
-                        onclick="calificarnivel1(1,$('input:radio[name=niv1_ej1]:checked').val(),$('input:radio[name=niv1_ej2]:checked').val())">Enviar
+                        onclick="calificarnivel1(1,$('input:radio[name=niv1_ej1]:checked').val(),$('input:radio[name=niv1_ej2]:checked').val())" class="bubbly-button">
                         Enviar
                     </button>
                 </div>
@@ -237,7 +237,7 @@
               ?>
                         </div>
                         <div>
-                            <button
+                            <button class="bubbly-button"
                                 onclick="calificarniv2(2,$('input:radio[name=ejercicio1]:checked').val(),$('input:radio[name=ejercicio2]:checked').val(),$('input:radio[name=ejercicio3]:checked').val())">Enviar
                                 :D</button></div>
                         <a href="#" class="popup__close">close</a>
@@ -317,9 +317,9 @@
                 </div>
             </div>
             <div class="text-center" style="margin-top:25px;">
-                <button
+                <button class="bubbly-button"
                     onclick="calificarniv2(3,$('input:radio[name=Niv3_ej1]:checked').val(),$('input:radio[name=Niv3_ej2]:checked').val(),$('input:radio[name=Niv3_ej3]:checked').val())">Enviar
-                    Enviar
+                    
                 </button>
             </div>
 
@@ -393,9 +393,9 @@
             </div>
             <hr>
             <div class="text-center" style="margin-top:25px;">
-                <button
+                <button class="bubbly-button"
                     onclick="calificarnivel4(4,$('#niv4_eje1').val(),$('#niv4_eje2').val(),$('#niv4_eje3').val(),$('#niv4_eje4').val(),$('#niv4_eje5').val(),$('#niv4_eje6').val(),$('#niv4_eje7').val(),$('#niv4_eje8').val(),$('#niv4_eje9').val())">Enviar
-                    Enviar
+                    
                 </button>
             </div>
 
@@ -471,7 +471,7 @@
             <hr>
 
             <div class="text-center" style="margin-top:25px;">
-                <button
+                <button class="bubbly-button"
                     onclick="calificarnivel5(5,$('#niv5_res1').val(),$('#niv5_ej1val1').val(),$('#niv5_ej1val2').val(),$('#niv5_resej1').val(),$('#niv5_res2').val(),$('#niv5_ej2val1').val(),$('#niv5_ej2val2').val(),$('#niv5_resej2').val(),$('#niv5_res3').val(),$('#niv5_ej3val1').val(),$('#niv5_ej3val2').val(),$('#niv5_resej3').val())">
                     Enviar
                 </button>
@@ -517,7 +517,7 @@
             </div>
 
             <div class="text-center" style="margin-top:25px;">
-                <button id="boton_nivel6" onclick="calificarnivel6(6)" disabled>Enviar
+                <button id="boton_nivel6" onclick="calificarnivel6(6)" disabled class="bubbly-button">
                     Enviar
                 </button>
             </div>
@@ -562,7 +562,7 @@
             </div>
 
             <div class="text-center" style="margin-top:25px;">
-                <button id="boton_nivel7" onclick="calificarnivel7(1)" disabled>Enviar
+                <button id="boton_nivel7" onclick="calificarnivel7(1)" disabled class="bubbly-button">
                     Enviar
                 </button>
             </div>
@@ -724,7 +724,7 @@
                     </div>
                 </div>
                 <div class="text-center" style="margin-top:25px;">
-                    <button id="boton_nivel1"
+                    <button id="boton_nivel1" class="bubbly-button"
                         onclick="calificarnivel8(8,$('#niv8_ej1_val1').val(),$('input:radio[name=niv8_ej1_val2]:checked').val(),$('#niv8_ej1_val3').val(),$('#niv8_ej1_res1').val(),$('#niv8_ej2_val1').val(),$('input:radio[name=niv8_ej2_val2]:checked').val(),$('#niv8_ej2_val3').val(),$('#niv8_ej2_res2').val(),$('#niv8_ej3_val1').val(),$('input:radio[name=niv8_ej3_val2]:checked').val(),$('#niv8_ej3_val3').val(),$('input:radio[name=niv8_ej3_val4]:checked').val(),$('#niv8_ej3_val5').val(),$('#niv8_ej3_res3').val(),$('#niv8_ej4_res4').val())">Enviar
 
                     </button>
@@ -868,7 +868,7 @@
                     </div>
                 </div>
                 <div class="text-center" style="margin-top:25px;">
-                    <button id="boton_nivel1"
+                    <button id="boton_nivel1" class="bubbly-button"
                         onclick="calificarnivel9(9,$('#niv9_ej1_res').val(),$('#niv9_ej2_res').val(),$('#niv9_ej3_res').val(),$('#niv9_ej4_res').val())">Enviar
 
                     </button>
@@ -1042,7 +1042,7 @@
                     </div>
                 </div>
                 <div class="text-center" style="margin-top:25px;">
-                    <button id="boton_nivel1"
+                    <button id="boton_nivel1" class="bubbly-button"
                         onclick="calificarnivel10(10,$('#niv10_ej1_res').val(),$('#niv10_ej2_res').val(),$('#niv10_ej3_res').val(),$('#niv10_ej4_res').val())">Enviar
                     </button>
                 </div>
@@ -1064,8 +1064,108 @@
     echo $trofeo
     ?>
 
+<style>
 
+.bubbly-button {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 1em;
+  padding: 1em 2em;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: blue;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+}
+.bubbly-button:focus {
+  outline: 0;
+}
+.bubbly-button:before, .bubbly-button:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.bubbly-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, blue 20%, transparent 20%), radial-gradient(circle, transparent 20%, blue 20%, transparent 30%), radial-gradient(circle, blue 20%, transparent 20%), radial-gradient(circle, blue 20%, transparent 20%), radial-gradient(circle, transparent 10%, blue 15%, transparent 20%), radial-gradient(circle, blue 20%, transparent 20%), radial-gradient(circle, blue 20%, transparent 20%), radial-gradient(circle, blue 20%, transparent 20%), radial-gradient(circle, blue 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+.bubbly-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, blue 20%, transparent 20%), radial-gradient(circle, blue 20%, transparent 20%), radial-gradient(circle, transparent 10%, blue 15%, transparent 20%), radial-gradient(circle, blue 20%, transparent 20%), radial-gradient(circle, blue 20%, transparent 20%), radial-gradient(circle, blue 20%, transparent 20%), radial-gradient(circle, blue 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.bubbly-button:active {
+  transform: scale(0.9);
+  background-color: #0000e6;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.bubbly-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.bubbly-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+  }
+}
+</style>
     <script>
+var animateButton = function(e) {
 
+e.preventDefault;
+//reset animation
+e.target.classList.remove('animate');
+
+e.target.classList.add('animate');
+setTimeout(function(){
+  e.target.classList.remove('animate');
+},700);
+};
+
+var bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+for (var i = 0; i < bubblyButtons.length; i++) {
+bubblyButtons[i].addEventListener('click', animateButton, false);
+}
     </script>
 </body>
