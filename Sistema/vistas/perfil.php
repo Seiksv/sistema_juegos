@@ -35,6 +35,7 @@
   $niveles = new Niveles();
   $userSession = new UserSession();
   $niveles_juego = $niveles->getNiveles($userSession->getCurrentUser());
+  $trofeo=0;
    
   include("assets/menu_lateral.php");
   ?>
@@ -81,6 +82,15 @@
 
                                             $i=0;
             foreach ($niveles_juego as $nivel) {
+                if($niveles_juego[$i]['trofeo']=="si"){
+                    $trofeo = "<script>
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Felicidades has completado el juego al 100%',
+                        text: 'Eres el mejor, No has hecho trampa ¿verdad?',
+                        footer: '<a href>¿Más información? Preguntale a tu profe!</a>'
+                      })</script>";
+                }
                 $barra_porcentaje = 0;
                 $barra_porcentaje = (((($niveles_juego[$i]['aciertos']) * 100) / $niveles_juego[$i]['ejercicios']) * 100) / 100;
                 if($i<5){
@@ -144,6 +154,8 @@ echo $html2;
     <script src="../rsc/js/jquery.waypoints.min.js"></script>
     <script src="../rsc/js/jquery.counterup.min.js"></script>
     <script src="../rsc/js/thema_profile.js"></script>
+    <script src="../rsc/js/sweetalert2.js"></script>
+    <?= $trofeo?>
 
 </body>
 

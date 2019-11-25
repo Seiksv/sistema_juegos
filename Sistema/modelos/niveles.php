@@ -10,7 +10,7 @@ class Niveles extends DB{
      if ($this->connect()) 
  {
 
-      $sql = "SELECT juego_x_usuario.*, juego.* FROM juego_x_usuario INNER JOIN juego on juego_x_usuario.id_juego = juego.idJuego where id_usuario = (Select id_usuario from usuario where usuario = '$usuario')";
+      $sql = "SELECT juego_x_usuario.*, juego.*,usuario.trofeo FROM juego_x_usuario INNER JOIN juego on juego_x_usuario.id_juego = juego.idJuego INNER JOIN usuario on juego_x_usuario.id_usuario = usuario.id_usuario where juego_x_usuario.id_usuario = (Select id_usuario from usuario where usuario = '$usuario')";
       $stmt = $this->connect()->prepare($sql);
       $stmt->execute(); 
      return $res = $stmt->fetchAll();
@@ -19,8 +19,14 @@ class Niveles extends DB{
         }
     }
 
+    public function activar_trofeo($user){
+        $query = $this->connect()->prepare(" UPDATE `usuario` SET `trofeo` = 'si' where usuario = '$user'");
+        $res = $query->execute();
+        return $res;
+    }
+
     public function getNivelesUser($user){
-        $query = $this->connect()->prepare('SELECT juego_x_usuario.*, juego.* FROM juego_x_usuario INNER JOIN juego on juego_x_usuario.id_juego = juego.idJuego WHERE juego_x_usuario.id_usuario = (Select id_usuario from usuario where usuario = :iduser)');
+        $query = $this->connect()->prepare('SELECT juego_x_usuario.*, juego.* FROM juego_x_usuario INNER JOIN juego on juego_x_usuario.id_juego = juego.idJuego  WHERE juego_x_usuario.id_usuario = (Select id_usuario from usuario where usuario = :iduser)');
         $query->execute(['iduser' => $user]);
         return $res = $query->fetchAll();
     }

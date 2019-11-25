@@ -47,8 +47,18 @@
     //print_r($niveles_juego);
 
     //Recorro el arrego de niveles
-
+    $trofeo=0;
     foreach ($niveles_juego as $nivel) {
+        
+        if($niveles_juego[$i]['trofeo']=="si"){
+            $trofeo = "<script>
+            Swal.fire({
+                icon: 'info',
+                title: 'Felicidades has completado el juego al 100%',
+                text: 'Eres el mejor, No has hecho trampa ¿verdad?',
+                footer: '<a href>¿Más información? Preguntale a tu profe!</a>'
+              })</script>";
+        }
       $barra_porcentaje = 0;
       $barra_porcentaje = (((($niveles_juego[$i]['aciertos']) * 100) / $niveles_juego[$i]['ejercicios']) * 250) / 100;
       //echo ($niveles_usuario);
@@ -1051,6 +1061,7 @@
 
     <?php
     include_once(EJERCICIOSJS);
+    echo $trofeo
     ?>
 
 

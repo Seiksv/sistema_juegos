@@ -47,6 +47,21 @@
                     $nivel = $nivel+1;
                     $activar_nivel = $niveles->activar_nivel($nivel,$usuario);
                  }
+                 if ($fallos==0 and $nivel==10) {
+                  $activar_trofeo = $niveles->activar_trofeo($usuario);
+                  echo "<script>
+                  Swal.fire({
+                   icon: 'success',
+                   title: 'Felicidades :D.',
+                   html: '<p style=`text-size:20px`>Avanza en los siguientes niveles!</p>',
+                   footer: '<a href>¿Más información? Preguntale a tu profe!</a>'
+                 }).then((result) => {
+                  if (result.value) {
+                    window.location.replace('puntajes.php')
+                  }
+                })
+                 </script>";
+                  }
                    if($fallos==0 and $nivel ==3){
                        echo "<script>
                        Swal.fire({
