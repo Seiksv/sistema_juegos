@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-11-2019 a las 01:54:00
+-- Tiempo de generación: 25-11-2019 a las 02:42:55
 -- Versión del servidor: 10.1.30-MariaDB
 -- Versión de PHP: 7.2.1
 
@@ -100,15 +100,15 @@ CREATE TABLE IF NOT EXISTS `juego_x_usuario` (
 
 INSERT INTO `juego_x_usuario` (`id`, `id_usuario`, `id_juego`, `intentos`, `fallos`, `aciertos`, `finalizado`, `acceso`) VALUES
 (3, 1, 1, 2, 0, 2, 'si', 'si'),
-(4, 1, 2, 3, 0, 2, 'no', 'si'),
-(5, 1, 3, 11, 0, 2, 'no', 'no'),
-(6, 1, 4, 8, 0, 9, 'si', 'no'),
+(4, 1, 2, 4, 0, 3, 'si', 'si'),
+(5, 1, 3, 12, 0, 3, 'si', 'si'),
+(6, 1, 4, 8, 0, 9, 'si', 'si'),
 (7, 1, 5, 6, 0, 6, 'si', 'no'),
 (8, 1, 6, 33, 0, 1, 'si', ''),
 (9, 1, 7, 6, 0, 1, 'si', ''),
-(10, 1, 8, 3, 0, 4, 'si', ''),
-(11, 1, 9, 3, 0, 4, 'si', ''),
-(12, 1, 10, 4, 3, 1, 'no', ''),
+(10, 1, 8, 3, 0, 4, 'si', 'si'),
+(11, 1, 9, 4, 0, 4, 'no', 'si'),
+(12, 1, 10, 29, 4, 0, 'no', 'si'),
 (13, 4, 1, 0, 0, 0, 'no', 'si'),
 (25, 11, 1, 0, 0, 0, 'no', 'si'),
 (26, 11, 2, 0, 0, 0, 'no', 'no'),
@@ -182,6 +182,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `TpoUsuario_id_tpo_usuario` int(11) NOT NULL,
   `Curso_idCurso` int(11) NOT NULL,
   `usuario` varchar(45) NOT NULL,
+  `trofeo` varchar(25) NOT NULL,
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `id_usuario_UNIQUE` (`id_usuario`),
   UNIQUE KEY `usuario` (`usuario`),
@@ -193,12 +194,12 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `contra`, `TpoUsuario_id_tpo_usuario`, `Curso_idCurso`, `usuario`) VALUES
-(1, 'Wicho', 'Wichon', '1234', 1, 1, 'wicho'),
-(4, 'Wichosda', '', '1234', 1, 1, 'wichos'),
-(11, 'pedro', NULL, '1234', 1, 1, 'harry'),
-(12, 'meco1', NULL, '1234', 1, 1, 'meco1'),
-(28, 'Vanne', 'Agustin con tigo xd', '1234', 1, 1, 'Meca2');
+INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `contra`, `TpoUsuario_id_tpo_usuario`, `Curso_idCurso`, `usuario`, `trofeo`) VALUES
+(1, 'Wicho', 'Wichon', '1234', 1, 1, 'wicho', 'si'),
+(4, 'Wichosda', '', '1234', 1, 1, 'wichos', ''),
+(11, 'pedro', NULL, '1234', 1, 1, 'harry', ''),
+(12, 'meco1', NULL, '1234', 1, 1, 'meco1', 'no'),
+(28, 'Vanne', 'Agustin con tigo xd', '1234', 1, 1, 'Meca2', '');
 
 --
 -- Restricciones para tablas volcadas
