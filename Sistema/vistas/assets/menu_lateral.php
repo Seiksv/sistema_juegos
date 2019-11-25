@@ -40,7 +40,7 @@
           
         </ul>
         <li>
-            <a href="">
+            <a href="ayuda.php">
                 <i class="fa fa-question-circle fa-lg"></i>
                 <span class="nav-text">Ayuda</span>
             </a>

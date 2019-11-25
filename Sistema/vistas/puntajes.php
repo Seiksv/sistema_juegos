@@ -56,7 +56,7 @@
       //Si el porcentaje es igual que el ancho total de la card o si el estado del juego es finalizado entonces se ejecuta
       if ($nivel['finalizado'] == "si") {
 
-        $felicitaciones = "Nivel Completo :D";
+        $felicitaciones = "<span style='color:white'>Nivel Completo :D</span>";
         $boton_jugar = "<a href='#ejercicio" . ($i + 1) . "' class='rainbow-button' alt='Volver a jugar' style='font-size:1.2vw' onclick='identificador_nivel(" . $nivel['idJuego'] . ")'></a>";
       }
       //Sino se muestran mensajes para que lo intentes :D

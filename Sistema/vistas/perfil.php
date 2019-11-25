@@ -30,8 +30,12 @@
   include_once("../rutas.php"); 
   include_once(USER_SESSION);
   include_once(BASE_DATOS);
+  include_once(MODELOS . "niveles.php");
 
-  $userSession = new UserSession();   
+  $niveles = new Niveles();
+  $userSession = new UserSession();
+  $niveles_juego = $niveles->getNiveles($userSession->getCurrentUser());
+   
   include("assets/menu_lateral.php");
   ?>
     <div class="cuerpo">
@@ -59,130 +63,79 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-1-12 ml-5" style="" >
-                <div class="card " style="background:white">
-                    <div class="card-body">
-                        <div class="" style="padding-top:5%;padding-left:50px;width:250px">
-                            <div class="tools_expert">
-                                <div class="skill_main">
-                                    <div class="skill_item">
-                                        <h4>Ejercicio 1 <span class="counter">85%</span>%</h4>
-                                        <div class="progress_br">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="85"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill_item">
-                                        <h4>Ejercicio 2 <span class="counter">90</span>%</h4>
-                                        <div class="progress_br">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="90"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill_item">
-                                        <h4>Ejercicio 3 <span class="counter">70</span>%</h4>
-                                        <div class="progress_br">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill_item">
-                                        <h4>Ejercicio 4 <span class="counter">95</span>%</h4>
-                                        <div class="progress_br">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="95"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill_item">
-                                        <h4>Ejercicio 5 <span class="counter">75</span>%</h4>
-                                        <div class="progress_br">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-1-12 ml-5" style="width:25%;" >
-                <div class="card " style="background:white">
-                    <div class="card-body">
-                        <div class="" style="padding-top:5%;padding-left:50px;width:250px">
-                            <div class="tools_expert">
-                                <div class="skill_main">
-                                <div class="skill_item">
-                                        <h4>Ejercicio 6 <span class="counter">75</span>%</h4>
-                                        <div class="progress_br">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill_item">
-                                        <h4>Ejercicio 7 <span class="counter">75</span>%</h4>
-                                        <div class="progress_br">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill_item">
-                                        <h4>Ejercicio 8 <span class="counter">75</span>%</h4>
-                                        <div class="progress_br">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill_item">
-                                        <h4>Ejercicio 9 <span class="counter">75</span>%</h4>
-                                        <div class="progress_br">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="skill_item">
-                                        <h4>Ejercicio 10 <span class="counter">75</span>%</h4>
-                                        <div class="progress_br">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
-                                                    aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                
+            <?php
+            $html1=' <div class="col-xs-1-12 ml-5" style="" >
+            <div class="card " style="background:white">
+                <div class="card-body">
+                    <div class="" style="padding-top:5%;padding-left:50px;width:250px">
+                        <div class="tools_expert">
+                            <div class="skill_main">';
+                            
+             $html2=' <div class="col-xs-1-12 ml-5" style="width:25%;" >
+                            <div class="card " style="background:white">
+                                <div class="card-body">
+                                    <div class="" style="padding-top:5%;padding-left:50px;width:250px">
+                                        <div class="tools_expert">
+                                            <div class="skill_main">';
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                            $i=0;
+            foreach ($niveles_juego as $nivel) {
+                $barra_porcentaje = 0;
+                $barra_porcentaje = (((($niveles_juego[$i]['aciertos']) * 100) / $niveles_juego[$i]['ejercicios']) * 100) / 100;
+                if($i<5){
+                $html1.='
+                                    <div class="skill_item">
+                                        <h4>'.$niveles_juego[$i]['nombre'].' <span class="counter">'.round($barra_porcentaje,2).'% (Intentos: '.$niveles_juego[$i]['intentos'].')</span></h4>
+                                        <div class="progress_br">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="'.$barra_porcentaje.'"
+                                                    aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                ';
+                }
+                else{
+                    $html2.= '
+                                        <div class="skill_item">
+                                            <h4>'.$niveles_juego[$i]['nombre'].' <span class="counter">'.round($barra_porcentaje,2).'% (Intentos: '.round($niveles_juego[$i]['intentos'],2).')</span></h4>
+                                            <div class="progress_br">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="'.$barra_porcentaje.'"
+                                                        aria-valuemin="0" aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                    ';
+                }
+                $i++;
+            }
+            $html1.='
             </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>  ';$html2.='
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>  ';
+echo $html1;
+echo $html2;
+            ?>
+
         </div>
 
     </div>
     </div>
 
-    <!-- Optional JavaScript -->    
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
     <script src="../rsc/js/jquery-3.4.1.js"></script>

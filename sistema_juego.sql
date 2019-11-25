@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-11-2019 a las 01:32:59
+-- Tiempo de generación: 25-11-2019 a las 01:54:00
 -- Versión del servidor: 10.1.30-MariaDB
 -- Versión de PHP: 7.2.1
 
@@ -53,19 +53,26 @@ INSERT INTO `curso` (`idCurso`, `nombre`) VALUES
 CREATE TABLE IF NOT EXISTS `juego` (
   `idJuego` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) DEFAULT NULL,
+  `ejercicios` int(11) NOT NULL,
   PRIMARY KEY (`idJuego`),
   UNIQUE KEY `idJuego_UNIQUE` (`idJuego`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `juego`
 --
 
-INSERT INTO `juego` (`idJuego`, `nombre`) VALUES
-(1, 'Nivel 1'),
-(2, 'Nivel 2'),
-(3, 'Nivel 3'),
-(4, 'Nivel 4');
+INSERT INTO `juego` (`idJuego`, `nombre`, `ejercicios`) VALUES
+(1, 'Nivel 1', 2),
+(2, 'Nivel 2', 3),
+(3, 'Nivel 3', 3),
+(4, 'Nivel 4', 9),
+(5, 'Nivel 5', 6),
+(6, 'Nivel 6', 1),
+(7, 'Nivel 7', 1),
+(8, 'Nivel 8', 4),
+(9, 'Nivel 9', 4),
+(10, 'Nivel 10', 4);
 
 -- --------------------------------------------------------
 
@@ -80,22 +87,49 @@ CREATE TABLE IF NOT EXISTS `juego_x_usuario` (
   `intentos` int(11) NOT NULL,
   `fallos` int(11) NOT NULL,
   `aciertos` int(11) NOT NULL,
-  `mejor_acierto` int(11) NOT NULL,
-  `mejor_fallo` int(11) NOT NULL,
-  `mejor_intento` int(11) NOT NULL,
   `finalizado` varchar(2) NOT NULL,
+  `acceso` varchar(64) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_usuario` (`id_usuario`),
   KEY `id_juego` (`id_juego`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `juego_x_usuario`
 --
 
-INSERT INTO `juego_x_usuario` (`id`, `id_usuario`, `id_juego`, `intentos`, `fallos`, `aciertos`, `mejor_acierto`, `mejor_fallo`, `mejor_intento`, `finalizado`) VALUES
-(1, 1, 1, 5, 0, 3, 2, 0, 2, 'no'),
-(2, 1, 2, 2, 3, 4, 10, 5, 6, 'si');
+INSERT INTO `juego_x_usuario` (`id`, `id_usuario`, `id_juego`, `intentos`, `fallos`, `aciertos`, `finalizado`, `acceso`) VALUES
+(3, 1, 1, 2, 0, 2, 'si', 'si'),
+(4, 1, 2, 3, 0, 2, 'no', 'si'),
+(5, 1, 3, 11, 0, 2, 'no', 'no'),
+(6, 1, 4, 8, 0, 9, 'si', 'no'),
+(7, 1, 5, 6, 0, 6, 'si', 'no'),
+(8, 1, 6, 33, 0, 1, 'si', ''),
+(9, 1, 7, 6, 0, 1, 'si', ''),
+(10, 1, 8, 3, 0, 4, 'si', ''),
+(11, 1, 9, 3, 0, 4, 'si', ''),
+(12, 1, 10, 4, 3, 1, 'no', ''),
+(13, 4, 1, 0, 0, 0, 'no', 'si'),
+(25, 11, 1, 0, 0, 0, 'no', 'si'),
+(26, 11, 2, 0, 0, 0, 'no', 'no'),
+(27, 11, 3, 0, 0, 0, 'no', 'no'),
+(28, 11, 4, 0, 0, 0, 'no', 'no'),
+(29, 11, 5, 0, 0, 0, 'no', 'no'),
+(30, 11, 6, 0, 0, 0, 'no', 'no'),
+(31, 11, 7, 0, 0, 0, 'no', 'no'),
+(32, 11, 8, 0, 0, 0, 'no', 'no'),
+(33, 11, 9, 0, 0, 0, 'no', 'no'),
+(34, 11, 10, 0, 0, 0, 'no', 'no'),
+(35, 12, 1, 1, 0, 2, 'si', 'si'),
+(36, 12, 2, 3, 0, 3, 'si', 'si'),
+(37, 12, 3, 0, 0, 0, 'no', 'si'),
+(38, 12, 4, 0, 0, 0, 'no', 'no'),
+(39, 12, 5, 0, 0, 0, 'no', 'no'),
+(40, 12, 6, 0, 0, 0, 'no', 'no'),
+(41, 12, 7, 0, 0, 0, 'no', 'no'),
+(42, 12, 8, 0, 0, 0, 'no', 'no'),
+(43, 12, 9, 0, 0, 0, 'no', 'no'),
+(44, 12, 10, 0, 0, 0, 'no', 'no');
 
 -- --------------------------------------------------------
 
@@ -150,16 +184,21 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `usuario` varchar(45) NOT NULL,
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `id_usuario_UNIQUE` (`id_usuario`),
+  UNIQUE KEY `usuario` (`usuario`),
   KEY `fk_Usuario_TpoUsuario1_idx` (`TpoUsuario_id_tpo_usuario`),
   KEY `fk_Usuario_Curso1_idx` (`Curso_idCurso`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `apellido`, `contra`, `TpoUsuario_id_tpo_usuario`, `Curso_idCurso`, `usuario`) VALUES
-(1, 'Wicho', 'Wichon', '1234', 1, 1, 'wicho');
+(1, 'Wicho', 'Wichon', '1234', 1, 1, 'wicho'),
+(4, 'Wichosda', '', '1234', 1, 1, 'wichos'),
+(11, 'pedro', NULL, '1234', 1, 1, 'harry'),
+(12, 'meco1', NULL, '1234', 1, 1, 'meco1'),
+(28, 'Vanne', 'Agustin con tigo xd', '1234', 1, 1, 'Meca2');
 
 --
 -- Restricciones para tablas volcadas

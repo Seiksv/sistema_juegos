@@ -998,7 +998,7 @@ html::after {
   -webkit-animation: bounce .3s ease infinite alternate;
   font-family: 'Erica One', cursive;
   font-size: 50px;
-  color: cyan;
+  color: black;
   text-align: center;
   line-height: 100px;
   text-shadow: 0 1px 0 #CCC, 0 2px 0 #CCC, 0 3px 0 #CCC, 0 3px 0 #CCC, 0 3px 0 #CCC, 0 3px 0 transparent, 0 3px 0 transparent, 0 3px 0 transparent, 0 3px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.6);

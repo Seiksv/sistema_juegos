@@ -54,6 +54,10 @@
                         title: 'Sabias que.',
                         html: '<p style=`text-size:20px`>Si el resultado con respecto a las cantidades de objetos aumenta estamos en presencia de una <strong>SUMA</strong> y se representa con ayuda del signo <strong>+</strong> que llamaremos <strong>“MAS”</strong> y el resultado final se representa con el signo <strong>=</strong> llamado <strong>“IGUAL”</strong>.</p><p>Si el resultado con respecto a las cantidades de objetos disminuye estamos en presencia de una <strong>RESTA</strong> y se representa con ayuda del signo <strong>-</strong> que llamaremos <strong>“MENOS”</strong> y el resultado final se representa con el signo <strong>=</strong> llamado <strong>“IGUAL”</strong>.</p>',
                         footer: '<a href>¿Más información? Preguntale a tu profe!</a>'
+                      }).then((result) => {
+                        if (result.value) {
+                          window.location.replace('puntajes.php')
+                        }
                       })
                       </script>";
                    }
@@ -64,7 +68,11 @@
                      title: 'Felicidades :D.',
                      html: '<p style=`text-size:20px`>Avanza en los siguientes niveles!</p>',
                      footer: '<a href>¿Más información? Preguntale a tu profe!</a>'
-                   })
+                   }).then((result) => {
+                    if (result.value) {
+                      window.location.replace('puntajes.php')
+                    }
+                  })
                    </script>";
                    }
                 }

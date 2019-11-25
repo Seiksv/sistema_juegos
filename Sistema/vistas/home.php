@@ -152,9 +152,6 @@ p {
   <p id="title" contenteditable="true" spellcheck="false"><span style="text-shadow: -0.06em 0 grey,  0.06em 0 cyan;">Bienvenido a </span><span style="text-shadow: -0.06em 0 grey,  0.06em 0 cyan;">Interact</span><span style="text-shadow: -0.06em 0 pink,  0.06em 0 cyan;">Math</span>
 </p>
  <div class="text-center" style="  justify-content: center;margin-left:auto;margin-rigth:auto;">
-    <button class=" titulo_bienvenido btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">Ver video</button>
-
-
  </div>
   
 </div>
@@ -166,14 +163,15 @@ p {
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Video de bienvenida :D</h5>
+            <h5 class="modal-title"></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
           </div>
           <div class="modal-body">
-          <iframe width="100%" height="480" src="../rsc/video/home.mp4" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-
+            Acerca del sitio.
+          <video width="100%" height="480" controls="controls" type="video/mp4" autoplay="">
+          <source src="../rsc/video/home.mp4">Tu navegador no soporta este video.</video>
         </div>
          
         </div>
@@ -187,6 +185,12 @@ p {
     <script src="../rsc/js/jquery-3.4.1.js"></script>
     <script src="../rsc/js/popper.min.js"></script>
     <script src="../rsc/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $("#modelId").modal('show');
+
+      });
+    </script>
 </body>
 
 </html>
