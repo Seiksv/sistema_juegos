@@ -414,7 +414,7 @@
                 correspondiente a la cantidad de objetos que se plante y resuelve el problema.
             </p>
             <hr>
-            <div class="text-center ">
+            <div class="text-center" style="margin-left:25%">
                 <table>
                     <tr>
                         <td><img src='../rsc/img/nivel5/flores.png' alt=''
@@ -432,7 +432,7 @@
 
             </div>
             <hr>
-            <div class="text-center ">
+            <div class="text-center " style="margin-left:25%">
 
                 <table>
                     <tr>
@@ -450,7 +450,7 @@
                 </table>
             </div>
             <hr>
-            <div class="text-center ">
+            <div class="text-center " style="margin-left:25%">
 
                 <table>
                     <tr>
@@ -583,13 +583,13 @@
                 signos correspondientes y resuelva las operaciones que se le piden.
             </p>
             <hr>
-            <div class="text-center ">
+            <div class="text-center " style="padding-top:5%;">
                 <p>
                     Si tengo 9 peras y una amiga de mama me regala 6. ¿Cuántas peras tengo en total?
                 </p>
             </div>
             <br>
-            <div class="text-center">
+            <div class="text-center" style="padding-bottom:5%;">
                 <span class="input_text">
                     <input type="number" placeholder="" id="niv8_ej1_val1">
                     <span></span>
@@ -615,12 +615,12 @@
             </div>
 
             <hr>
-            <div class="text-center">
+            <div class="text-center" style="padding-top:5%;">
                 <p>
                     Ernesto compro 10 relojes en una tienda de San Salvador, deicidio darle 3 a su hermano menor Luis.
                     ¿Cuántos relojes le quedaron a Ernesto?
                 </p>
-                <div class="text-center">
+                <div class="text-center" style="padding-bottom:5%;">
                     <span class="input_text">
                         <input type="number" placeholder="" id="niv8_ej2_val1">
                         <span></span>
@@ -645,7 +645,7 @@
                     </span>
                 </div>
                 <hr>
-                <div class="text-center">
+                <div class="text-center" style="padding-top:5%;">
                     <p>
                         Marcos tiene una granja, los animales están separados, según su especie, en corrales distintos.
                         En el primer corral Marcos tiene 8 vacas, en el segundo corral tiene 3 cerdos y en tercer corral
@@ -653,7 +653,7 @@
                         ¿Cuántos animales hay en la granja de Marcos?
 
                     </p>
-                    <div class="text-center">
+                    <div class="text-center" style="padding-bottom:5%;">
                         <span class="input_text">
                             <input type="number" placeholder="" id="niv8_ej3_val1">
                             <span></span>
@@ -679,7 +679,7 @@
                                 <option value="2">-</option>
                                 <option value="3">=</option>
                             </select>
-                        </span>
+                        </span><br>
 
                         <span class="input_text">
                             <input type="number" placeholder="" id="niv8_ej3_val5">
@@ -693,12 +693,12 @@
                     </div>
                 </div>
                 <hr>
-                <div class="text-center">
+                <div class="text-center" style="padding-top:5%;">
                     <p>
                         Susana ha comprado 16 guineos, de camino a su casa se encontró a María y le regalo 7 de ellos
                         ¿Cuántos guineos le habrán quedado a Susana?
                     </p>
-                    <div class="text-center">
+                    <div class="text-center" style="padding-bottom:5%;">
                         <span class="input_text">
                             <input type="number" placeholder="" id="">
                             <span></span>
@@ -746,13 +746,13 @@
                 signos correspondientes y resuelva las operaciones que se le piden.
             </p>
             <hr>
-            <div class="text-center ">
+            <div class="text-center " style="padding-top:5%;">
                 <p>
                 Josué tenía 27 jocotes que había comprado en el mercado, al llegar a su casa decide compartirlos con su hermanita Marielos, dándole 13 jocotes en una bolsita. ¿Cuántos jocotes le quedaron a Josué?
                 </p>  
             </div>
             <br>
-            <div class="text-center">
+            <div class="text-center" style="padding-bottom:5%;">
                 <span class="input_text">
                     <input type="number" placeholder="" id="">
                     <span></span>
@@ -778,11 +778,11 @@
             </div>
 
             <hr>
-            <div class="text-center">
+            <div class="text-center" style="padding-top:5%;">
                 <p>
                 En el albergue de perros se encuentran 14 perritos y 11 perritas. Don Juan quien es el encargado del albergue, quiere saber cuantos animales hay en total ¿Podrías ayudarlo?
                 </p>
-                <div class="text-center">
+                <div class="text-center" style="padding-bottom:5%;">
                     <span class="input_text">
                         <input type="number" placeholder="" id="">
                         <span></span>
@@ -807,7 +807,7 @@
                     </span>
                 </div>
                 <hr>
-                <div class="text-center">
+                <div class="text-center" style="padding-top:5%;padding-bottom:5%">
                     <p>
                     Katy ha comprado 40 pelotas para regalar a sus alumnos, si de camino a la escuela se le pincharon 23 ¿Cuántas pelotas le habrán quedado?
 
@@ -838,7 +838,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="text-center">
+                <div class="text-center" style="padding-top:5%;">
                     <p>
                     Jessica ha comprado 12 manzanas y Pedro tiene 6 en casa, si deciden juntarlas para hacer unos pasteles con ellas ¿Cuántas manzanas tendrán en total?
                     </p>
@@ -884,7 +884,7 @@
                     <p class="linkedin__text">Nivel 10</p>
                 </div>
             </div>
-        <div class="text-center">
+        <div class="text-center" >
             <p >
                 <h1 class="popup__title">Indicaciones</h1>Lorena, Antonio, Santiago y Cecilia desean comprar algunas cosas en la tienda de regalos.
                 <img src='../rsc/img/nivel10/indicaciones.jpg' alt=''
@@ -892,13 +892,13 @@
             </p>
             </div>
             <hr>
-            <div class="text-center ">
+            <div class="text-center " style="padding-top:5%;">
                 <p>
                 Si Lorena luego de un rato ha decidido llevarse un tambor y una blusa de doctora juguete, ¿Cuánto deberá pagar en la caja?
                 </p>  
             </div>
             <br>
-            <div class="text-center">
+            <div class="text-center" style="padding-bottom:5%;">
                 <span class="input_text">
                     <input type="number" placeholder="" id="">
                     <span></span>
@@ -932,10 +932,10 @@
             </div>
 
             <hr>
-            <div class="text-center">
+            <div class="text-center" style="padding-top:5%;">
                 <p>
                 Antonio comprara un carrito y una pelota ¿Cuánto debe de pagar en la caja?                </p>
-                <div class="text-center">
+                <div class="text-center"  style="padding-bottom:5%;">
                     <span class="input_text">
                         <input type="number" placeholder="" id="">
                         <span></span>
@@ -968,11 +968,11 @@
                     </span>
                 </div>
                 <hr>
-                <div class="text-center">
+                <div class="text-center" style="padding-top:5%;">
                     <p>
                     Santiago ha decidido llevar un tambor y un carrito ¿Cuánto pagara Santiago?
                     </p>
-                    <div class="text-center">
+                    <div class="text-center" style="padding-bottom:5%;">
                         <span class="input_text">
                             <input type="number" placeholder="" id="">
                             <span></span>
@@ -1005,7 +1005,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="text-center">
+                <div class="text-center" style="padding-top:5%;padding-bottom:5%;">
                     <p>
                     Cecilia ha decidido llevar una blusa de doctora juguete, pero su mamá le dio un vale de descuento de $17 ¿Cuánto pagara Cecilia por su blusa?                    
                   </p>
