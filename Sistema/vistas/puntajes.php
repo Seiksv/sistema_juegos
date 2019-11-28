@@ -1,3 +1,5 @@
+<title>InteracMath - Juegos</title>
+
 <head>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
     <!-- Bootstrap CSS -->
@@ -120,6 +122,7 @@
             </p>
             <hr>
             <div class="text-center ">
+            <p>¿Cuántos vegetales ves en las imágenes?</p>
                 <img src='../rsc/img/nivel1/ej1/1.png' alt=''
                     style=' margin-left: auto;margin-right: auto;display:inline-block;width:10%;'>
                 <img src='../rsc/img/nivel1/ej1/2.jpg' alt=''
@@ -138,8 +141,11 @@
                 <input type='radio' name='niv1_ej1' value='6' class='option-input radio'>6
                 <input type='radio' name='niv1_ej1' value='5' class='option-input radio'>5
             </div>
+            <br>
+
             <hr>
             <div class="text-center ">
+            <p>¿Cuántas semillas ves en la sandía?</p>
                 <img src='../rsc/img/nivel1/ej2/1.png' alt=''
                     style=' margin-left: auto;margin-right: auto;display:inline-block;width:20%;'>
             </div>
@@ -173,7 +179,7 @@
             <hr>
             <div class="text-center">
 
-                <p>Cuantos petalos ves en esta flor?</p>
+                <p>¿Cuántos pétalos ves en esta flor?</p>
                 <div style="display:inline-block">
                     <?= $ruta_imagen ?>
                 </div>
@@ -193,7 +199,7 @@
             <br><br>
             <hr>
             <div class="text-center">
-                <p>Cuantos petalos tienen las dos flores juntas?</p>
+                <p>¿Cuántos pétalos tienen las dos flores juntas?</p>
                 <div style="display:inline-block">
 
                     <?= $ej2ruta_imagen ?>
@@ -217,7 +223,7 @@
                 <hr>
                 <div class="text-center">
 
-                    <p>Cuantos petalos hay en total?</p>
+                    <p>¿Cuántos pétalos hay en total?</p>
                     <div style="display:inline-block">
                         <?= $ej3ruta_imagen ?>
                         <?= $ruta_imagen ?>
@@ -261,7 +267,7 @@
             <hr>
             <div class="text-center ">
                 <div class="mt-5">
-                    <p>Cuantos arboles plantados hay en total?</p>
+                    <p>¿Cuántos árboles plantados hay en total?</p>
                     <img src='../rsc/img/nivel3/arbol.jpg' alt=''
                         style=' margin-left: auto;margin-right: auto;margin-bottom:15px;display:inline-block;width:30%;'>
                     <img src='../rsc/img/nivel3/arbol.jpg' alt=''
@@ -281,7 +287,7 @@
             <div class="text-center" style="margin-top:50px">
                 <div class="">
                     <hr>
-                    <p>Cuantos arboles plantados hay en total?</p>
+                    <p>¿Cuántos árboles plantados hay en total?</p>
                     <img src='../rsc/img/nivel3/arbol.jpg' alt=''
                         style=' margin-left: auto;margin-right: auto;margin-bottom:15px;display:inline-block;width:30%;'>
                     <img src='../rsc/img/nivel3/arbol.jpg' alt=''
@@ -300,7 +306,7 @@
             <div class="text-center" style="margin-top:50px">
                 <div class="">
                     <hr>
-                    <p>Cuantos arboles plantados hay en total?</p>
+                    <p>¿Cuántos árboles plantados hay en total?</p>
                     <img src='../rsc/img/nivel3/arbol.jpg' alt=''
                         style=' margin-left: auto;margin-right: auto;margin-bottom:15px;display:inline-block;width:30%;'>
                     <img src='../rsc/img/nivel3/talado.jpg' alt=''
@@ -334,8 +340,7 @@
                 </div>
             </div>
             <p>
-                <h1 class="popup__title">Indicaciones</h1>Observa las siguientes figuras y responde las preguntas con
-                ayuda del puntero.
+                <h1 class="popup__title">Indicaciones</h1>Observa las siguientes figuras, resuelve la operación que se te indica y coloca el resultado final.
             </p>
             <hr>
             <div class="text-center ">
@@ -410,8 +415,7 @@
                 </div>
             </div>
             <p>
-                <h1 class="popup__title">Indicaciones</h1> Resuelve las siguientes ejercicios, coloca el numero
-                correspondiente a la cantidad de objetos que se plante y resuelve el problema.
+                <h1 class="popup__title">Indicaciones</h1> Resuelve las siguientes ejercicios.
             </p>
             <hr>
             <div class="text-center" style="margin-left:25%">
@@ -488,10 +492,9 @@
                 </div>
             </div>
             <p>
-                <h1 class="popup__title">Indicaciones</h1>Tiene 5 minutos para redirijase al siguiente <a
+                <h1 class="popup__title">Indicaciones</h1>Ingresa al siguiente <a
                     href="https://www.mundoprimaria.com/juegos-educativos/juegos-matematicas/suma-horizontal-2"
-                    onclick="cronometro(true)" target="_blank">Enlace y juegar </a> antes de los 5 minutos tiene que
-                regresar y darle click a "ENVIAR"
+                    onclick="cronometro(true)" target="_blank">enlace y juega,</a> completa los ejercicios planteados antes que el cronometro marque los 3 minutos dale click a "ENVIAR" y disfruta del siguiente nivel.
             </p>
             <hr>
             <div class="text-center ">
@@ -533,10 +536,10 @@
                 </div>
             </div>
             <p>
-                <h1 class="popup__title">Indicaciones</h1>Tiene 5 minutos para redirijase al siguiente <a
+                <h1 class="popup__title">Indicaciones</h1>Ingresa al siguiente <a
                     href="https://www.mundoprimaria.com/juegos-educativos/juegos-matematicas/resta-horizontal-2"
-                    onclick="cronometro2(true)" target="_blank">Enlace y juegar </a> antes de los 5 minutos tiene que
-                regresar y darle click a "ENVIAR"
+                    onclick="cronometro2(true)" target="_blank">enlace y juega,</a> completa los ejercicios planteados antes que el cronometro marque los 3 minutos dale click a "ENVIAR" y disfruta del siguiente nivel.
+            </p>
             </p>
             <hr>
             <div class="text-center ">
@@ -579,13 +582,12 @@
             </div>
 
             <p>
-                <h1 class="popup__title">Indicaciones</h1>Resuelve los siguientes ejercicios, coloque las cantidades y
-                signos correspondientes y resuelva las operaciones que se le piden.
+                <h1 class="popup__title">Indicaciones</h1>Resuelve los siguientes ejercicios, coloca las cantidades y signos correspondientes y resuelva las operaciones que se te piden.
             </p>
             <hr>
             <div class="text-center " style="padding-top:5%;">
                 <p>
-                    Si tengo 9 peras y una amiga de mama me regala 6. ¿Cuántas peras tengo en total?
+                    Si tengo 9 peras y una amiga de mamá me regala 6. ¿Cuántas peras tengo en total?
                 </p>
             </div>
             <br>
@@ -597,7 +599,7 @@
                 <span class="input_text"
                     style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                     <select>
-                        <option value="" id="niv8_ej1_val2">Simbolo</option>
+                        <option value="" id="niv8_ej1_val2">Símbolo</option>
                         <option value="1">+</option>
                         <option value="2">-</option>
                         <option value="3">=</option>
@@ -617,7 +619,7 @@
             <hr>
             <div class="text-center" style="padding-top:5%;">
                 <p>
-                    Ernesto compro 10 relojes en una tienda de San Salvador, deicidio darle 3 a su hermano menor Luis.
+                    Ernesto compró 10 relojes en una tienda de San Salvador, decidio darle 3 a su hermano menor Luis.
                     ¿Cuántos relojes le quedaron a Ernesto?
                 </p>
                 <div class="text-center" style="padding-bottom:5%;">
@@ -628,7 +630,7 @@
                     <span class="input_text"
                         style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                         <select>
-                            <option value="" id="niv8_ej2_val2">Simbolo</option>
+                            <option value="" id="niv8_ej2_val2">Símbolo</option>
                             <option value="1">+</option>
                             <option value="2">-</option>
                             <option value="3">=</option>
@@ -661,7 +663,7 @@
                         <span class="input_text"
                             style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                             <select>
-                                <option value="" id="niv8_ej3_val2">Simbolo</option>
+                                <option value="" id="niv8_ej3_val2">Símbolo</option>
                                 <option value="1">+</option>
                                 <option value="2">-</option>
                                 <option value="3">=</option>
@@ -674,7 +676,7 @@
                             style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
 
                             <select>
-                                <option value="" id="niv8_ej3_val4">Simbolo</option>
+                                <option value="" id="niv8_ej3_val4">Símbolo</option>
                                 <option value="1">+</option>
                                 <option value="2">-</option>
                                 <option value="3">=</option>
@@ -706,7 +708,7 @@
                         <span class="input_text"
                             style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                             <select>
-                                <option value="" id="">Simbolo</option>
+                                <option value="" id="">Símbolo</option>
                                 <option value="1">+</option>
                                 <option value="2">-</option>
                                 <option value="3">=</option>
@@ -742,8 +744,7 @@
             </div>
 
             <p>
-                <h1 class="popup__title">Indicaciones</h1>Resuelve los siguientes ejercicios, coloque las cantidades y
-                signos correspondientes y resuelva las operaciones que se le piden.
+                <h1 class="popup__title">Indicaciones</h1>Resuelve los siguientes ejercicios, coloca las cantidades y signos correspondientes y resuelva las operaciones que se te piden.
             </p>
             <hr>
             <div class="text-center " style="padding-top:5%;">
@@ -760,7 +761,7 @@
                 <span class="input_text"
                     style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                     <select>
-                        <option value="" id="niv8_ej1_val2">Simbolo</option>
+                        <option value="" id="niv8_ej1_val2">Símbolo</option>
                         <option value="1">+</option>
                         <option value="2">-</option>
                         <option value="3">=</option>
@@ -780,7 +781,7 @@
             <hr>
             <div class="text-center" style="padding-top:5%;">
                 <p>
-                En el albergue de perros se encuentran 14 perritos y 11 perritas. Don Juan quien es el encargado del albergue, quiere saber cuantos animales hay en total ¿Podrías ayudarlo?
+                En el albergue de perros se encuentran 14 perritos y 11 perritas. Don Juan quien es el encargado del albergue, quiere saber cuántos animales hay en total ¿Podrías ayudarlo?
                 </p>
                 <div class="text-center" style="padding-bottom:5%;">
                     <span class="input_text">
@@ -790,7 +791,7 @@
                     <span class="input_text"
                         style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                         <select>
-                            <option value="" id="">Simbolo</option>
+                            <option value="" id="">Símbolo</option>
                             <option value="1">+</option>
                             <option value="2">-</option>
                             <option value="3">=</option>
@@ -820,7 +821,7 @@
                         <span class="input_text"
                             style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                             <select>
-                                <option value="" id="">Simbolo</option>
+                                <option value="" id="">Símbolo</option>
                                 <option value="1">+</option>
                                 <option value="2">-</option>
                                 <option value="3">=</option>
@@ -850,7 +851,7 @@
                         <span class="input_text"
                             style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                             <select>
-                                <option value="" id="">Simbolo</option>
+                                <option value="" id="">Símbolo</option>
                                 <option value="1">+</option>
                                 <option value="2">-</option>
                                 <option value="3">=</option>
@@ -906,7 +907,7 @@
                 <span class="input_text"
                     style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                     <select>
-                        <option value="" id="">Simbolo</option>
+                        <option value="" id="">Símbolo</option>
                         <option value="1">+</option>
                         <option value="2">-</option>
                         <option value="3">=</option>
@@ -919,7 +920,7 @@
                 <span class="input_text"
                     style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                     <select>
-                        <option value="" id="">Simbolo</option>
+                        <option value="" id="">Símbolo</option>
                         <option value="1">+</option>
                         <option value="2">-</option>
                         <option value="3">=</option>
@@ -943,7 +944,7 @@
                     <span class="input_text"
                         style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                         <select>
-                            <option value="" id="">Simbolo</option>
+                            <option value="" id="">Símbolo</option>
                             <option value="1">+</option>
                             <option value="2">-</option>
                             <option value="3">=</option>
@@ -956,7 +957,7 @@
                     <span class="input_text"
                     style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                     <select>
-                        <option value="" id="">Simbolo</option>
+                        <option value="" id="">Símbolo</option>
                         <option value="1">+</option>
                         <option value="2">-</option>
                         <option value="3">=</option>
@@ -980,7 +981,7 @@
                         <span class="input_text"
                             style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                             <select>
-                                <option value="" id="">Simbolo</option>
+                                <option value="" id="">Símbolo</option>
                                 <option value="1">+</option>
                                 <option value="2">-</option>
                                 <option value="3">=</option>
@@ -992,7 +993,7 @@
                         <span class="input_text"
                     style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                     <select>
-                        <option value="" id="">Simbolo</option>
+                        <option value="" id="">Símbolo</option>
                         <option value="1">+</option>
                         <option value="2">-</option>
                         <option value="3">=</option>
@@ -1017,7 +1018,7 @@
                         <span class="input_text"
                             style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                             <select>
-                                <option value="" id="">Simbolo</option>
+                                <option value="" id="">Símbolo</option>
                                 <option value="1">+</option>
                                 <option value="2">-</option>
                                 <option value="3">=</option>
@@ -1029,7 +1030,7 @@
                         <span class="input_text"
                     style="width:100px;  box-shadow: inset 0 0 0 1px #fff, 0 0 0 4px #fff, 1px -1px 20px #1beabd,  -1px 1px 20px #ff104c; text-align:center">
                     <select>
-                        <option value="" id="">Simbolo</option>
+                        <option value="" id="">Símbolo</option>
                         <option value="1">+</option>
                         <option value="2">-</option>
                         <option value="3">=</option>
@@ -1061,7 +1062,7 @@
 
     <?php
     include_once(EJERCICIOSJS);
-    echo $trofeo
+   // echo $trofeo
     ?>
 
 <style>

@@ -7,10 +7,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content=="IE=edge" />
     <meta name="google" value="notranslate" />
-    <title>Side Menu</title>
+    <title>InteracMath - Perfil</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../rsc/css/Bootstrap.min.css" />
+    <link rel="stylesheet" href="../rsc/css/bootstrap.min.css" />
     <link href="../rsc/css/all.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../rsc/css/tema_principal.css">
     <link rel="stylesheet" type="text/css" href="../rsc/css/style.css">
@@ -52,8 +52,8 @@
                                 <h6>Bienvenido de nuevo!</h6>
                                 <h3><?= $userSession->getCurrentUser(); ?></h3>
                                 <hr>
-                                <p>Aca podras observar las puntuaciones que has obtenido en los ejercicios
-                                    propuestos que estan en la plataforma!<p>
+                                <p>Acá podras observar las puntuaciones que has obtenido en los ejercicios
+                                    propuestos que están en la plataforma!<p>
                                         <div style="padding:10%">
                                             <img src="../rsc/img/usericons.gif" alt="" style="border-radius:25%">
 

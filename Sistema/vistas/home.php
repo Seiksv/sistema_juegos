@@ -7,10 +7,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content=="IE=edge" />
     <meta name="google" value="notranslate" />
-    <title>Side Menu</title>
+    <title>InteracMath</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../rsc/css/Bootstrap.min.css" />
+    <link rel="stylesheet" href="../rsc/css/bootstrap.min.css" />
     <link href="../rsc/css/all.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../rsc/css/tema_principal.css">
     <link rel="stylesheet" type="text/css" href="../rsc/css/style.css">

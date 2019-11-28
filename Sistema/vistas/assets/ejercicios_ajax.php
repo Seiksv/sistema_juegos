@@ -49,20 +49,19 @@
                  }
                  if ($fallos==0 and $nivel==10) {
                   $activar_trofeo = $niveles->activar_trofeo($usuario);
-                  echo "<script>
+                  echo  "<script>
                   Swal.fire({
-                   icon: 'success',
-                   title: 'Felicidades :D.',
-                   html: '<p style=`text-size:20px`>Avanza en los siguientes niveles!</p>',
-                   footer: '<a href>¿Más información? Preguntale a tu profe!</a>'
-                 }).then((result) => {
-                  if (result.value) {
-                    window.location.replace('puntajes.php')
+                      icon: 'info',
+                      title: 'Felicidades has completado el juego al 100%',
+                      text: 'Eres el mejor, No has hecho trampa ¿verdad?',
+                      footer: '<a href>¿Más información? Preguntale a tu profe!</a>'
+                    }).then((result) => {
+                      if (result.value) {
+                        window.location.replace('puntajes.php')
+                      }
+                    })</script>";
                   }
-                })
-                 </script>";
-                  }
-                   if($fallos==0 and $nivel ==3){
+                else if($fallos==0 and $nivel ==3){
                        echo "<script>
                        Swal.fire({
                         icon: 'success',

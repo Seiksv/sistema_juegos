@@ -208,7 +208,7 @@ var jqxhr = $.post("assets/ejercicios_ajax.php", {
       face.innerText = parts.join(':');
     
       
-       if(parts[1] >= 5){
+       if(parts[1] >= 3){
       
         Swal.fire({
           title: 'Llegaste tarde',
@@ -291,7 +291,7 @@ var jqxhr = $.post("assets/ejercicios_ajax.php", {
       face.innerText = parts.join(':');
     
       
-       if(parts[1] >= 5){
+       if(parts[1] >= 3){
       
         Swal.fire({
           title: 'Llegaste tarde',

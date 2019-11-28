@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ayuda</title>
+    <title>InteracMath - Ayuda</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="../rsc/css/tema_principal.css">
@@ -50,12 +50,14 @@
 <div class="card hijo">
     <img class="card-img-top" src="holder.js/100x180/" alt="">
     <div class="card-body" >
-        <h1 class="card-title">InteracMath - Entregado por</h1>
+        <h2 class="card-title">InteracMath - Entregado por</h2>
         <hr>
-        <h2 class="card-text">Carmen</h2>
-        <h2 class="card-text">Carmen</h2>
-        <h2 class="card-text">Carmen</h2>
-        <h2 class="card-text">Carmen</h2>
+        <h4 class="card-text">Gómez Martínez, Ana Ruth</h4>
+        <h4 class="card-text">Gudiel Asencio, Susana Carolina </h4>
+        <h4 class="card-text">Javier Vásquez, Carmen Beatriz </h4>
+        <h4 class="card-text">Martínez Tejada, Stephannie Jeanmillette </h4>
+        <h4 class="card-text">Ortiz García, Yenifer Elizabeth </h4>
+        <br>
         <div style="bottom:0;position: absolute;width:80%;margin-bottom:25px;">
         <hr>
         <h2 class="card-text" >Todos los derechos reservados.</h2></div>
